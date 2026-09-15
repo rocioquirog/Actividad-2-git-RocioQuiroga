@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.recetario {
+    width: 80%;
+    min-height: 100vh;
+    margin: auto;
+    padding: 5%;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    height: 10%;
+    border: 0.1rem solid black;
+    background-color: hwb(0 90% 10%);
+}
+
+a {
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+
+section {
+    margin-top: 15%;
+    margin-bottom: 5%;
+    padding: 3%;
+    border: 0.1rem solid black;
+    background-color: lightblue;
+}
+
+.titulo-receta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.indice{
+    margin-top: 15%;
+}
+
+html{
+    scroll-padding-top: 12%;
+}
