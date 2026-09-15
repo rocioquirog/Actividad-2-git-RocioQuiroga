@@ -1,0 +1,73 @@
+:root {
+  --green: #b9e4c9;
+  --yellow: #fde9b6;
+  --pink: #f4c6c3;
+  --blue: #c8d9f2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "i1 i1 i2 i2 i4 i4"
+    "i1 i1 i3 i3 i4 i4"
+    "i5 i5 i5 i6 i6 i6";
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1.2rem, 4vw, 3rem);
+  border: 0.0625rem solid rgba(0, 0, 0, 0.25);
+}
+
+.i1 { grid-area: i1; background: var(--green); }
+.i2 { grid-area: i2; background: var(--yellow); }
+.i3 { grid-area: i3; background: var(--yellow); }
+.i4 { grid-area: i4; background: var(--green); }
+.i5 { grid-area: i5; background: var(--pink); }
+.i6 { grid-area: i6; background: var(--blue); }
+
+/* Vista Tablet */
+@media (max-width: 64em) and (min-width: 48.0625em) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "i1 i2"
+      "i3 i4"
+      "i5 i6";
+  }
+}
+
+/* Vista Mobile */
+@media (max-width: 48em) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+      "i1"
+      "i2"
+      "i3"
+      "i4"
+      "i5"
+      "i6";
+  }
+}
